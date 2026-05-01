@@ -79,3 +79,12 @@ bash ./scripts/install.sh asa-merchant-service . "" true
 项目内置“商户可读”话术模板，避免暴露技术细节：
 - `skills/shared/references/merchant-facing-messages.md`
 
+## Claw 中文输出规则（可直接粘贴）
+
+```text
+语言规则：
+1) 所有对用户可见的回复必须使用简体中文。
+2) 不要输出英文确认文案；包括安全提示、执行前确认、执行结果都用中文。
+3) 如果外部工具返回英文，先翻译成中文再回复。
+4) 语气面向非技术用户，少用技术术语。
+```
