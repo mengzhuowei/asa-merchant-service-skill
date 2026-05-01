@@ -1,0 +1,8 @@
+interface:
+  display_name: "ASA Merchant Service"
+  short_description: "调用 ASA 商户后台 API 的总入口技能"
+  default_prompt: "Use $asa-merchant-service to handle merchant backend API operations end to end."
+
+policy:
+  allow_implicit_invocation: true
+

@@ -1,0 +1,8 @@
+interface:
+  display_name: "Merchant Orders"
+  short_description: "商户订单查询与履约确认"
+  default_prompt: "Use $merchant-orders to query order lists/details and confirm merchant fulfillment."
+
+policy:
+  allow_implicit_invocation: true
+

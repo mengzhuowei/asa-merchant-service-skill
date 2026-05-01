@@ -1,0 +1,8 @@
+interface:
+  display_name: "Merchant Auth"
+  short_description: "商户后台认证与会话管理"
+  default_prompt: "Use $merchant-auth to register, login, verify MFA, refresh token, or check current admin info."
+
+policy:
+  allow_implicit_invocation: true
+

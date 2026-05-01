@@ -1,0 +1,8 @@
+interface:
+  display_name: "Merchant Finance"
+  short_description: "商户分账收款退款与账单导出"
+  default_prompt: "Use $merchant-finance to fetch settlements, payments, refunds, or export merchant bills."
+
+policy:
+  allow_implicit_invocation: true
+
