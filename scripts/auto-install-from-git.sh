@@ -1,16 +1,11 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-REPO_URL="${1:-}"
+REPO_URL="${1:-https://github.com/mengzhuowei/asa-merchant-service-skill.git}"
 REF="${2:-main}"
 SKILL_NAME="${3:-asa-merchant-service}"
 CODEX_HOME_INPUT="${4:-}"
-FORCE_UPGRADE="${5:-false}"
-
-if [[ -z "${REPO_URL}" ]]; then
-  echo "Usage: $0 <repo_url> [ref] [skill_name] [codex_home]" >&2
-  exit 1
-fi
+FORCE_UPGRADE="${5:-true}"
 
 if [[ -n "${CODEX_HOME_INPUT}" ]]; then
   CODEX_HOME_DIR="${CODEX_HOME_INPUT}"

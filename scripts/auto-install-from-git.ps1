@@ -1,16 +1,12 @@
 param(
-    [string]$RepoUrl,
+    [string]$RepoUrl = "https://github.com/mengzhuowei/asa-merchant-service-skill.git",
     [string]$Ref = "main",
     [string]$SkillName = "asa-merchant-service",
     [string]$CodexHome = "",
-    [switch]$ForceUpgrade
+    [switch]$ForceUpgrade = $true
 )
 
 $ErrorActionPreference = "Stop"
-
-if ([string]::IsNullOrWhiteSpace($RepoUrl)) {
-    throw "RepoUrl is required."
-}
 
 if ([string]::IsNullOrWhiteSpace($CodexHome)) {
     if (-not [string]::IsNullOrWhiteSpace($env:CODEX_HOME)) {
