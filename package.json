@@ -1,0 +1,24 @@
+{
+  "name": "@your-scope/asa-merchant-service-skills",
+  "version": "1.0.0",
+  "description": "Installable OpenClaw skills for ASA Merchant Service",
+  "type": "module",
+  "bin": {
+    "asa-merchant-service-skills": "bin/cli.js"
+  },
+  "files": [
+    "bin",
+    "asa-merchant-service-skills"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "openclaw",
+    "skill",
+    "asa",
+    "merchant",
+    "agent"
+  ],
+  "license": "UNLICENSED"
+}
