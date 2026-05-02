@@ -1,8 +1,0 @@
-interface:
-  display_name: "Merchant Products"
-  short_description: "商户商品增删改查与上下架"
-  default_prompt: "Use $merchant-products to list, create, update, publish, unpublish, or delete merchant products."
-
-policy:
-  allow_implicit_invocation: true
-

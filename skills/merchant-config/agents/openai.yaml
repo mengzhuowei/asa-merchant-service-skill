@@ -1,8 +1,0 @@
-interface:
-  display_name: "Merchant Config"
-  short_description: "商户支付OAuth与API Key配置管理"
-  default_prompt: "Use $merchant-config to manage payment config, OAuth redirect URIs, and API keys."
-
-policy:
-  allow_implicit_invocation: true
-

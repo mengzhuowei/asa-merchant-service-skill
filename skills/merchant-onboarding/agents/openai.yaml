@@ -1,8 +1,0 @@
-interface:
-  display_name: "Merchant Onboarding"
-  short_description: "商户入驻申请与进度查询"
-  default_prompt: "Use $merchant-onboarding to submit onboarding materials and track onboarding review status."
-
-policy:
-  allow_implicit_invocation: true
-
