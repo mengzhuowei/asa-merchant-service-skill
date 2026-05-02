@@ -130,3 +130,47 @@
 - 写操作必须二次确认
 - 仅在必要范围暴露用户手机号、地址、证件图片链接
 - 禁止伪造接口成功结果
+
+## 9) 商户入驻字段基线（建议直接配置给 Claw）
+
+`asa-merchant-onboarding` 提交 `POST /merchant/merchant/apply` 时，建议约束为：
+
+- 必填：
+  - `merchant_name`
+  - `merchant_type`
+  - `business_license_no`
+  - `business_license_image_url`
+  - `legal_person_name`
+  - `legal_person_id_no`
+  - `legal_person_id_front_image_url`
+  - `legal_person_id_back_image_url`
+  - `contact_name`
+  - `contact_phone`
+  - `contact_email`
+  - `settlement_account_name`
+  - `settlement_account_no`
+  - `settlement_bank_name`
+  - `settlement_bank_branch`
+  - `business_address`
+  - `province`
+  - `city`
+  - `district`
+  - `business_categories`
+- 可选：
+  - `store_name`
+  - `store_logo_url`
+  - `store_description`
+  - `website_url`
+  - `wechat_id`
+  - `tax_registration_no`
+  - `organization_code`
+  - `business_term_start`
+  - `business_term_end`
+  - `supplementary_material_urls`
+  - `remark`
+
+执行建议：
+
+- 缺任一必填字段时只返回“缺失字段清单”，不提交。
+- 提交前二次确认主体、结算、证照信息。
+- 提交成功后至少回传：`onboarding_id`、`status`、`submitted_at`（如接口返回）。

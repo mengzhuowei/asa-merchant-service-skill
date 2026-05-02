@@ -57,6 +57,9 @@
 
 用户提到“提交入驻、入驻审核进度”时：
 - 调用 `asa-merchant-onboarding`
+- 先补齐必填字段再提交：`merchant_name`、`merchant_type`、`business_license_no`、`business_license_image_url`、`legal_person_name`、`legal_person_id_no`、`legal_person_id_front_image_url`、`legal_person_id_back_image_url`、`contact_name`、`contact_phone`、`contact_email`、`settlement_account_name`、`settlement_account_no`、`settlement_bank_name`、`settlement_bank_branch`、`business_address`、`province`、`city`、`district`、`business_categories`
+- 可选字段（如用户已提供则一并提交）：`store_name`、`store_logo_url`、`store_description`、`website_url`、`wechat_id`、`tax_registration_no`、`organization_code`、`business_term_start`、`business_term_end`、`supplementary_material_urls`、`remark`
+- 缺 1 个必填字段都不要发起 `POST /merchant/merchant/apply`，先给用户“缺失字段清单”；提交前做一次友好确认
 
 ### 3.7 商户运营
 

@@ -64,6 +64,11 @@
 - 提交入驻申请
 - 查询审核进度
 
+入驻申请字段收集规则（必须执行）：
+- 必填字段：`merchant_name`、`merchant_type`、`business_license_no`、`business_license_image_url`、`legal_person_name`、`legal_person_id_no`、`legal_person_id_front_image_url`、`legal_person_id_back_image_url`、`contact_name`、`contact_phone`、`contact_email`、`settlement_account_name`、`settlement_account_no`、`settlement_bank_name`、`settlement_bank_branch`、`business_address`、`province`、`city`、`district`、`business_categories`
+- 可选字段：`store_name`、`store_logo_url`、`store_description`、`website_url`、`wechat_id`、`tax_registration_no`、`organization_code`、`business_term_start`、`business_term_end`、`supplementary_material_urls`、`remark`
+- 执行口径：缺任一必填字段不得提交；提交前二次确认；成功后回传 `onboarding_id` 与审核状态；被驳回时输出 `rejection_reason` 与补件建议
+
 ### 3.7 商户运营管理
 
 当用户提到以下意图时，调用 `asa-merchant-operations`：
