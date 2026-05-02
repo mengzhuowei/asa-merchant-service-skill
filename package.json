@@ -1,18 +1,7 @@
 {
-  "name": "@your-scope/asa-merchant-service-skills",
+  "name": "asa-merchant-service-skills",
   "version": "1.0.0",
   "description": "Installable OpenClaw skills for ASA Merchant Service",
-  "type": "module",
-  "bin": {
-    "asa-merchant-service-skills": "bin/cli.js"
-  },
-  "files": [
-    "bin",
-    "asa-merchant-service-skills"
-  ],
-  "engines": {
-    "node": ">=18"
-  },
   "keywords": [
     "openclaw",
     "skill",
@@ -20,5 +9,29 @@
     "merchant",
     "agent"
   ],
-  "license": "UNLICENSED"
+  "homepage": "https://github.com/mengzhuowei/asa-merchant-service-skill#readme",
+  "bugs": {
+    "url": "https://github.com/mengzhuowei/asa-merchant-service-skill/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mengzhuowei/asa-merchant-service-skill.git"
+  },
+  "license": "UNLICENSED",
+  "author": "",
+  "type": "module",
+  "main": "index.js",
+  "bin": {
+    "asa-merchant-service-skills": "bin/cli.js"
+  },
+  "files": [
+    "bin",
+    "asa-merchant-service-skills"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": ">=18"
+  }
 }
