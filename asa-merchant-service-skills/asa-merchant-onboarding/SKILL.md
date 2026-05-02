@@ -72,7 +72,7 @@ metadata:
 
 ## 字段校验规则（提交前）
 
-- `merchant_type=individual` 时，若无营业执照可由平台策略豁免 `business_license_*`，否则仍按必填处理。
+- `merchant_type=individual` 时，`business_license_no` 与 `business_license_image_url` 仍为必填，需上传营业执照后再提交。
 - 手机号、邮箱、身份证号、营业执照号做基础格式校验，不通过不提交。
 - `business_categories` 至少 1 项，建议不超过 5 项。
 - 证照类 URL 必须可访问且为图片文件。
