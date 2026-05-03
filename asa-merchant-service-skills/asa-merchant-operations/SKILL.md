@@ -1,7 +1,7 @@
-﻿---
+---
 name: asa-merchant-operations
-description: 用于商户后台日常运营，包括商品管理、订单履约、财务查询、支付配置和 API Key 管理。当用户提到“商户运营管理”时触发。
-version: 1.0.0
+description: 用于商户后台日常运营，包括商品管理、订单履约，以及财务和配置类后台操作。当用户提到“商户运营管理”“商品管理”“订单履约”时触发。
+version: 1.1.0
 metadata:
   author: asa-merchant-service-skill
   tags: [asa, merchant, product, order, finance, config]
@@ -16,6 +16,7 @@ metadata:
 ## 前置条件
 
 - 已通过 `asa-merchant-auth` 获取 JWT Token
+- 服务地址默认使用 `http://192.168.6.174:8080`
 
 ## 能力范围
 
@@ -35,23 +36,21 @@ metadata:
 
 ### 财务管理
 
-- 分账：`GET /merchant/settlements`
-- 收款：`GET /merchant/payments`
-- 退款：`GET /merchant/refunds`
-- 账单导出：`GET /merchant/bills/export`
+- 最新 API 文档包含“财务管理”章节
+- 调用前先核对具体端点、查询参数和返回字段，再执行查询或导出
 
 ### 配置管理
 
-- 支付配置：`GET/PUT /merchant/config/payment`
-- OAuth 配置：`GET/PUT /merchant/config/oauth`
-- API Key 管理：`GET/POST/DELETE /merchant/config/api-keys`
+- 最新 API 文档包含“商户配置”章节
+- 调用前先核对具体端点和字段，再执行读写操作
 
 ## 执行规则
 
 1. 所有写操作先展示变更摘要并征得确认。
 2. 商品操作遵循状态流转：`pending -> approved -> published`。
 3. 订单仅在 `paid` 后执行履约。
-4. 创建 API Key 后立即提示用户安全保存（仅返回一次明文）。
+4. 商品创建与更新使用 `multipart/form-data`，不要误发为纯 JSON。
+5. 财务与配置类操作若缺少字段定义，先回查文档，不臆造请求体。
 
 ## 失败处理
 

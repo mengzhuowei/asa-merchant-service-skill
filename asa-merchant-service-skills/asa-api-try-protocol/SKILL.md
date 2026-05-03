@@ -1,7 +1,7 @@
-﻿---
+---
 name: asa-api-try-protocol
-description: 用于 ASA 协议 try 接口的健康检查、回显调试和服务统计读取。当用户提到“连通性检测”“ping”“调试请求”时触发。
-version: 1.0.0
+description: 用于 ASA 协议 try 接口的健康检查、回显调试和服务统计读取。当用户提到“连通性检测”“ping”“调试请求”“服务状态”时触发。
+version: 1.1.0
 metadata:
   author: asa-merchant-service-skill
   tags: [asa, try, healthcheck, debug]
@@ -39,6 +39,13 @@ metadata:
 - HTTP 404：提示 `MERCHANT_NOT_FOUND`
 - HTTP 429：指数退避重试（最多 3 次）
 - HTTP 5xx：报告服务异常并建议稍后重试
+
+## 协议要点
+
+- try 协议无需认证，适合排查“服务是否活着”而不是业务授权问题
+- `ping` 重点读取 `status` 与 `timestamp`
+- `echo` 重点核对请求体是否被原样回显
+- `stats` 重点读取 `uptime`、`goroutines`、`memory_used`、`version`
 
 ## 约束
 

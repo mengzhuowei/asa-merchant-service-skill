@@ -14,6 +14,14 @@
 - 商户入驻申请与审核进度跟踪
 - 商户日常运营管理（商品、订单、财务、配置）
 
+当前仓库已按最新文档校正以下关键约束：
+
+- 商户入驻使用 `multipart/form-data`，必填字段为 `business_name`、`contact_name`、`contact_phone`、`contact_email`、`settlement_bank`、`settlement_account`、`settlement_account_name`
+- 入驻附件 `business_license`、`id_card_front`、`id_card_back` 为可选文件字段
+- 商品列表仅返回已上架商品；分页 `limit` 最大为 `100`
+- 取消订单需要显式提交 `reason`
+- 退款查询接口当前至少保证返回 `refund_id`，不应臆造额外状态字段
+
 ## 技能模块
 
 当前包含 7 个核心技能：
@@ -41,11 +49,14 @@
 - 分页参数：`offset`（默认 0）、`limit`（默认 20，最大 100）
 - 错误响应：`{"code":"ERROR_CODE","message":"错误描述"}`
 - 限流策略：每分钟 100 次，遇到 `RATE_LIMIT_EXCEEDED`（HTTP 429）需退避重试
+- 时间格式：ISO 8601，例如 `2025-01-01T00:00:00+08:00`
+- `try` 协议无需认证，其余 ASA 协议接口需 Bearer Token 或 API Key
 
 ## 安全与使用建议
 
 - `merchant_id`、`token`、`api_key` 建议放入安全存储，不在对话中明文回显
 - 创建订单、创建支付单、退款、删除等写操作必须二次确认
+- 商户入驻材料、身份证件、银行卡信息按敏感信息最小化展示
 - 遇到 `401/403` 先修复认证，再重试业务接口
 - 遇到 `404` 明确提示对象不存在，并建议检查相关 ID
 
