@@ -59,7 +59,7 @@
 
 在 Agent 运行配置中准备以下信息：
 
-- `ASA_BASE_URL`：`http://192.168.6.174:8080`
+- `ASA_BASE_URL`：`https://xnh4hygmay5j97sev9l3g6uxwoinf6b5vcyrt6b5we1mhr9vegv7u5ksfjg1.iepose.cn`
 - `merchant_id`：目标商户 ID
 - 认证头之一：
   - `Authorization: Bearer <access_token>`

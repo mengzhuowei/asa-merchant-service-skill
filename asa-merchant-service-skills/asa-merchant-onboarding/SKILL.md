@@ -16,7 +16,7 @@ metadata:
 ## 前置条件
 
 - 已通过 `asa-merchant-auth` 获取后台 JWT Token
-- 服务地址默认使用 `http://192.168.6.174:8080`
+- 服务地址默认使用 `https://xnh4hygmay5j97sev9l3g6uxwoinf6b5vcyrt6b5we1mhr9vegv7u5ksfjg1.iepose.cn`
 
 ## 关键接口
 

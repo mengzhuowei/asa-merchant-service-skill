@@ -18,7 +18,7 @@ metadata:
 - 已知 `merchant_id`
 - 已有 `order_id`（创建支付单时必需）
 - 已具备 OAuth Token 或 API Key
-- 服务地址默认使用 `http://192.168.6.174:8080`
+- 服务地址默认使用 `https://xnh4hygmay5j97sev9l3g6uxwoinf6b5vcyrt6b5we1mhr9vegv7u5ksfjg1.iepose.cn`
 
 ## 关键接口
 
