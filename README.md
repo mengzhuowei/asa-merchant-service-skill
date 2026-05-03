@@ -43,7 +43,7 @@
 
 ## 全局约定
 
-- API 服务地址：`https://xnh4hygmay5j97sev9l3g6uxwoinf6b5vcyrt6b5we1mhr9vegv7u5ksfjg1.iepose.cn`
+- API 服务地址：`http://192.168.6.174:8080`
 - ASA 协议 Base URL：`/shop/{merchant_id}`
 - 商户后台 Base URL：`/merchant`
 - 分页参数：`offset`（默认 0）、`limit`（默认 20，最大 100）

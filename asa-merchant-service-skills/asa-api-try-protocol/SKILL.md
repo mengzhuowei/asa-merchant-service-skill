@@ -17,7 +17,7 @@ metadata:
 
 - `merchant_id`（必需）
 - `echo_payload`（可选，用于 echo）
-- `service_base_url`（可选，默认 `https://xnh4hygmay5j97sev9l3g6uxwoinf6b5vcyrt6b5we1mhr9vegv7u5ksfjg1.iepose.cn`）
+- `service_base_url`（可选，默认 `http://192.168.6.174:8080`）
 
 ## 执行步骤
 
